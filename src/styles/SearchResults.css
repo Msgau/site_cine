@@ -1,0 +1,29 @@
+
+.searchResults {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.searchResults img, .searchResults h3, .searchResults .result {
+    width: 220px;
+}
+
+.searchResults img {
+    height: 330px;
+}
+
+.searchResults .result {
+    height: 380px;
+    margin: 0 5px 0 5px;
+}
+.searchResults h3 {
+    font-size: 13px;
+    word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

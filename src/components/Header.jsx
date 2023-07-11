@@ -1,13 +1,14 @@
 import logo from '../assets/LOGO.png'
 import '../styles/header.css'
+import MovieSearch from './MovieSearch';
 // import { Link, NavLink, useLocation } from "react-router-dom";
 
 export default function Header() {
   return(
     <header>
       <img src={logo} alt="logo" className='logo'/>
-      <input type="text" aria-label='Rechercher un film' placeholder="Rechercher un film" alt='rechercher un film' />
-
+      <h1>Ciné Crew</h1>
+      <MovieSearch />
       <Menu />
     </header>
   )
