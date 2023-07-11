@@ -2,12 +2,14 @@ import { useContext } from 'react';
 import { AppContext } from '../context/AppContext';
 import '../styles/SearchResults.css';
 import defaultImage from '../assets/image-non-disponible.png';
+import Header from '../components/Header';
 
 const SearchResults = () => {
   const { responseData, imageUrl, totalPages } = useContext(AppContext); // Accédez à responseData, imageUrl et totalPages via useContext
 
   return (
     <div>
+      <Header />
       <div className="searchResults">
         {responseData && (
           <>

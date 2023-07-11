@@ -1,10 +1,13 @@
 import { useState, useContext } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
 import { AppContext } from '../context/AppContext';
 
 const MovieSearch = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const { setResponseData, setImageUrl, setTotalPages } = useContext(AppContext); // Accédez à responseData via useContext
+  const navigate = useNavigate(); // Initialisez useNavigate
 
   const handleSearch = (event) => {
     event.preventDefault();
@@ -23,6 +26,7 @@ const MovieSearch = () => {
         setResponseData(title); // Mise à jour de responseData via setResponseData
         setImageUrl(imageUrl);
         setTotalPages(totalPages);
+        navigate('/searchresults');
       })
       .catch(error => {
         // Gestion des erreurs ici
