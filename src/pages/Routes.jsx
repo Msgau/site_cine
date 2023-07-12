@@ -14,7 +14,7 @@ function RouteConfiguration() {
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
             <Route path="/*" element={<Error404 />} />
-            <Route path="/searchresults" element={<SearchResults />} />
+            <Route path="/searchresults/:page" element={<SearchResults />} />
             {/* <Route path='/rooms/:id' element={<Rooms />} /> */}
           </Routes>
         </Router>

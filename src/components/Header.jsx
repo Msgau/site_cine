@@ -1,13 +1,13 @@
 import logo from '../assets/LOGO.png'
 import '../styles/header.css'
 import MovieSearch from './MovieSearch';
-// import { Link, NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 export default function Header() {
   return(
     <header>
       <img src={logo} alt="logo" className='logo'/>
-      <h1>Ciné Crew</h1>
+      <h1><NavLink to="/">Ciné Crew</NavLink></h1>
       <MovieSearch />
       <Menu />
     </header>
@@ -21,11 +21,9 @@ function Menu() {
     <nav className="navbar">
       <ul>
         <li>
-          {/* <NavLink to="/" style={{ 
-              textDecoration: location.pathname === "/" ? "underline" : "none"
-            }}> */}
+          <NavLink to="/">
             Accueil
-          {/* </NavLink> */}
+          </NavLink>
         </li>
         <li>
           {/* <NavLink to="/about" style={{

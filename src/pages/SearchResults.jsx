@@ -3,10 +3,11 @@ import { AppContext } from '../context/AppContext';
 import '../styles/SearchResults.css';
 import defaultImage from '../assets/image-non-disponible.png';
 import Header from '../components/Header';
+import axios from 'axios';
 
 const SearchResults = () => {
-  const { responseData, imageUrl, totalPages } = useContext(AppContext); // Accédez à responseData, imageUrl et totalPages via useContext
-
+  const { responseData, imageUrl, totalPages, requestUrl } = useContext(AppContext); // Accédez à responseData, imageUrl et totalPages via useContext
+    console.log(requestUrl);
   return (
     <div>
       <Header />

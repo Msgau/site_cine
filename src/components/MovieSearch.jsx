@@ -6,16 +6,16 @@ import { AppContext } from '../context/AppContext';
 
 const MovieSearch = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const { setResponseData, setImageUrl, setTotalPages } = useContext(AppContext); // Accédez à responseData via useContext
+  const { setResponseData, setImageUrl, setTotalPages, setRequestUrl } = useContext(AppContext); // Accédez à responseData via useContext
   const navigate = useNavigate(); // Initialisez useNavigate
 
   const handleSearch = (event) => {
     event.preventDefault();
 
     const apiKey = '3d5c29e0c046f6e5a8ccfd97fd8abd28';
-    const url = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${searchTerm}&include_adult=false&page=1`;
+    const requestUrl = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${searchTerm}&include_adult=false&page=1`;
 
-    axios.get(url)
+    axios.get(requestUrl)
       .then(response => {
         // Traitement des données de réponse ici
         const totalPages = response.data.total_pages
@@ -25,8 +25,9 @@ const MovieSearch = () => {
         const imageUrl = response.data.results.map(movie => movie.poster_path);
         setResponseData(title); // Mise à jour de responseData via setResponseData
         setImageUrl(imageUrl);
+        setRequestUrl(requestUrl);
         setTotalPages(totalPages);
-        navigate('/searchresults');
+        navigate(`/searchresults/1`);
       })
       .catch(error => {
         // Gestion des erreurs ici
