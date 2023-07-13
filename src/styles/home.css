@@ -1,0 +1,36 @@
+.home  {
+    display: flex;
+    justify-content:space-between;
+}
+.trending {
+    width: 200px;
+    margin: 10px 0 0 0;
+}
+.trendingList {
+    display: flex;
+    flex-wrap: wrap;
+}
+.trendMovie {
+    margin: 0 auto 10px;
+    height: 150px;
+}
+.trending img, .trending h3 {
+    width: 80px;
+}
+.trending h2 {
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.trending h3 {
+    font-size: 10px;
+    word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: white;
+    margin: 0 0 10px 0;
+}

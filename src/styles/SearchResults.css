@@ -27,3 +27,18 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+.pagesNavigate {
+    margin-top: 20px;
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+.pagesNavigate .previous {
+    position: absolute;
+    left: 0;
+}
+.pagesNavigate .next {
+    position: absolute;
+    right: 0;
+}
