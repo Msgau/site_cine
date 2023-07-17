@@ -7,6 +7,10 @@ header {
     max-width: 1280px;
     /* background-color: white; */
 }
+.logo_title {
+    display: flex;
+    margin: 0;
+}
 header a {
     text-decoration: none;
     color: white;
@@ -21,17 +25,19 @@ header ul a:hover {
 .logo {
     width: 50px;
     border-radius: 10px;
+    height: 56px;
 }
 header h1 {
     font-family: 'Raleway', Arial, Helvetica, sans-serif;
 }
 header form {
     position: relative;
+    width: 300px;
 }
 header input {
     background-color: white;
     color: grey;
-    width: 250px;
+    width: 300px;
     border-radius: 5px;
 }
 header button {

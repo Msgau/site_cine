@@ -6,8 +6,10 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 export default function Header() {
   return(
     <header>
+      <div className='logo_title'>
       <img src={logo} alt="logo" className='logo'/>
       <h1><NavLink to="/">Ciné Crew</NavLink></h1>
+      </div>
       <MovieSearch />
       <Menu />
     </header>

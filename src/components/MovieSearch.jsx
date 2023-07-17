@@ -43,7 +43,6 @@ const MovieSearch = () => {
   };
 
   return (
-    <div>
       <form onSubmit={handleSearch}>
         <input
           type="text"
@@ -54,7 +53,6 @@ const MovieSearch = () => {
         />
         <button type="submit">GO</button>
       </form>
-    </div>
   );
 };
 
