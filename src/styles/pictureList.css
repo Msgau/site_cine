@@ -1,0 +1,31 @@
+.component {
+    width: 100%;
+    background-color: rgb(68, 67, 67);
+    border-radius: 15px;
+    height: 280px;
+}
+.component h3 {
+    margin-left: 10px;
+}
+.component-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 20px 0 0 0;
+}
+.component-item, .component-item img {
+    width: 100px;
+    height: 150px;
+    border-radius: 5px;
+}
+.component-item figcaption {
+    height: 50px;
+    color: white;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1em;
+}

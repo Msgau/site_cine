@@ -3,6 +3,7 @@ import Home from './Home';
 import Error404 from './Error404';
 import SearchResults from './SearchResults';
 import Movie from './Movie';
+import Person from './Person';
 
 function RouteConfiguration() {
 
@@ -17,7 +18,7 @@ function RouteConfiguration() {
             <Route path="/*" element={<Error404 />} />
             <Route path="/searchresults/:page" element={<SearchResults />} />
             <Route path="/movie/:id" element={<Movie />} />
-            {/* <Route path='/rooms/:id' element={<Rooms />} /> */}
+            <Route path='/person/:personID' element={<Person />} />
           </Routes>
         </Router>
   

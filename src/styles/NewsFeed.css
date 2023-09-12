@@ -1,0 +1,22 @@
+.newsFeed {
+    margin: 0;
+    width: 60%;
+    max-width: 850px;
+}
+.newsFeed h2 {
+    margin: 0 auto;
+    width: 150px;
+}
+
+.composantActu {
+    width: 100%;
+    height: 350px;
+    border: 2px solid white;
+    margin: 20px auto;
+    padding: 20px 0 0 50px;
+}
+
+.composantActu ul {
+    padding: 0;
+    list-style-type: circle;
+}

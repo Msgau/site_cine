@@ -1,6 +1,7 @@
 .home  {
     display: flex;
     justify-content:space-between;
+    margin: 10px 0 0 0;
 }
 .trending {
     width: 200px;
@@ -16,6 +17,9 @@
 }
 .trending img, .trending h3 {
     width: 80px;
+}
+.trending img {
+    height: 120px;
 }
 .trending h2 {
     font-size: 15px;

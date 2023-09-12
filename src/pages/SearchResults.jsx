@@ -94,19 +94,21 @@ const SearchResults = () => {
             {responseData.map((title, index) => (
               <div key={index} className="result">
                 {imageUrl && imageUrl[index] ? (
-                  <Link
-                    to={`/movie/${movieId[index]}`} 
-                    className="trendMovie"
-                  >
+                  <Link to={`/movie/${movieId[index]}`} className="trendMovie">
                     <img
                       src={`https://image.tmdb.org/t/p/w500${imageUrl[index]}`}
                       alt={`Poster for ${title}`}
                     />
                   </Link>
                 ) : (
-                  <img src={defaultImage} alt="Default Image" />
+                  <Link to={`/movie/${movieId[index]}`} className="trendMovie">
+                    <img src={defaultImage} alt="Default Image" />
+                  </Link>
                 )}
+                <Link to={`/movie/${movieId[index]}`} className="trendMovie">
                 <h3 title={title}>{title}</h3>
+                  </Link>
+                
               </div>
             ))}
           </>
@@ -115,13 +117,17 @@ const SearchResults = () => {
 
       <div className="pagesNavigate">
         {pageQueryParam > 1 && (
-          <button className="previous" onClick={handlePreviousPage}>page précédente</button>
+          <button className="previous" onClick={handlePreviousPage}>
+            page précédente
+          </button>
         )}
         <div>
           Page {pageQueryParam}/{totalPages}
         </div>
         {pageQueryParam < totalPages && (
-          <button className="next" onClick={handleNextPage}>page suivante</button>
+          <button className="next" onClick={handleNextPage}>
+            page suivante
+          </button>
         )}
       </div>
     </div>

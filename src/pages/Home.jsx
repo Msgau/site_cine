@@ -4,6 +4,7 @@ import axios from "axios";
 import Header from "../components/Header";
 import "../styles/home.css";
 import Menu from "../components/menu";
+import NewsFeed from "../components/NewsFeed";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <Header />
       <div className="home">
         <Menu />
+        <NewsFeed />
         <TrendingMovies />
       </div>
     </div>
@@ -49,8 +51,9 @@ function TrendingMovies() {
           <img
             src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
             alt={movie.title}
+            title={movie.title}
           />
-          <h3>{movie.title}</h3>
+          <h3 title={movie.title}>{movie.title}</h3>
         </Link>
       ))}
       </div>
