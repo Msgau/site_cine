@@ -10,12 +10,15 @@ const Person = () => {
   const [personDetails, setpersonDetails] = useState(null);
   const [showFullBiography, setShowFullBiography] = useState(false);
   const [popularCredits, setPopularCredits] = useState([]);
+  const [moviesDirected, setMoviesDirected] = useState([]);
+
 
   useEffect(() => {
     const apiKey = "3d5c29e0c046f6e5a8ccfd97fd8abd28";
     const personUrl = `https://api.themoviedb.org/3/person/${personID}?api_key=${apiKey}&language=fr-FR`;
     const combinedCreditsUrl = `https://api.themoviedb.org/3/person/${personID}/combined_credits?api_key=${apiKey}&language=fr-FR`;
-
+    const creditsUrl = `https://api.themoviedb.org/3/person/${personID}/credits?api_key=${apiKey}&language=fr-FR`;
+    
     // Requête pour obtenir les détails de la personne
     axios
       .get(personUrl)
@@ -42,6 +45,18 @@ const Person = () => {
         const topMovieCredits = movieCredits.slice(0, 8);
 
         setPopularCredits(topMovieCredits);
+
+        // Filtrer les films réalisés par la personne
+        const moviesDirected = movieCredits.filter(
+          (credit) => credit.job === "Director"
+        );
+    
+        // Afficher les titres des films réalisés dans la console
+        console.log(movieCredits)
+        console.log("Films réalisés par la personne :", moviesDirected.map((movie) => movie.title));
+    
+        // Mettre à jour l'état avec les films réalisés
+        setMoviesDirected(moviesDirected);
       })
       .catch((error) => {
         console.error(error);

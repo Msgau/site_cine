@@ -20,8 +20,6 @@ const MovieDetails = () => {
   const apiKey = "3d5c29e0c046f6e5a8ccfd97fd8abd28";
   const [movieDetails, setMovieDetails] = useState(null);
   const [casting, setCasting] = useState([]);
-  const [directorsInfo, setDirectorsInfo] = useState([]);
-  const [writersInfo, setWritersInfo] = useState([]);
 
   useEffect(() => {
     const movieUrl = `https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}&language=fr-FR`;
@@ -70,8 +68,18 @@ const MovieDetails = () => {
         />
         <div className="movie-info">
           <h2 className="movie-title">{title}</h2>
-          <CrewInfo id={id} apiKey={apiKey} job="Director" title="Réalisation : " />
-          <CrewInfo id={id} apiKey={apiKey} job="Screenplay" title="Scénario : " />
+          <CrewInfo
+            id={id}
+            apiKey={apiKey}
+            job="Director"
+            title="Réalisation : "
+          />
+          <CrewInfo
+            id={id}
+            apiKey={apiKey}
+            job="Screenplay"
+            title="Scénario : "
+          />
           <p className="movie-date">
             Date de sortie : {formatDate(release_date)}
           </p>
@@ -89,6 +97,12 @@ const MovieDetails = () => {
         statut="person"
         imagePathKey="profile_path"
       />
+      {/* <PictureList
+        objects={projects}
+        componentTitle="Projets de réalisation :"
+        statut="movie"
+        imagePathKey="poster_path"
+      /> */}
     </div>
   );
 };
