@@ -3,6 +3,15 @@
     width: 60%;
     max-width: 850px;
 }
+.composantActu.first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 25px;
+    padding: 20px;
+
+}
 .newsFeed h2 {
     margin: 0 auto;
     width: 150px;

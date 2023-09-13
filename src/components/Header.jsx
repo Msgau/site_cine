@@ -23,7 +23,7 @@ function Menu() {
     <nav className="navbar">
       <ul>
         <li>
-          <NavLink to="/">
+          <NavLink to="/site_cine/">
             Accueil
           </NavLink>
         </li>

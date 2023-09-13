@@ -35,7 +35,7 @@ const MovieSearch = () => {
         setRequestUrl(requestUrl);
         setTotalPages(totalPages);
         setMovieId(movieId); // Stockage de l'ID du film dans le contexte
-        navigate(`/searchresults/1`);
+        navigate(`/site_cine/searchresults/1`);
       })
       .catch((error) => {
         console.error(error);

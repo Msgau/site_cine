@@ -7,7 +7,7 @@ export default function Menu() {
       <h2>Menu</h2>
       <ul>
         <li>
-          <NavLink to="/">Accueil</NavLink>
+          <NavLink to="/site_cine/">Accueil</NavLink>
         </li>
       </ul>
     </div>

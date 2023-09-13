@@ -24,7 +24,7 @@ function TrendingMovies() {
   const navigate = useNavigate();
   
   const handleMovieClick = (movieId) => {
-    navigate(`/movie/${movieId}`);
+    navigate(`/site_cine/movie/${movieId}`);
   };
 
   useEffect(() => {
@@ -47,7 +47,7 @@ function TrendingMovies() {
       <h2>Tendances</h2>
       <div className="trendingList">
       {movies.map(movie => (
-        <Link key={movie.id} to={`/movie/${movie.id}`} className='trendMovie' onClick={() => handleMovieClick(movie.id)}>
+        <Link key={movie.id} to={`/site_cine/movie/${movie.id}`} className='trendMovie' onClick={() => handleMovieClick(movie.id)}>
           <img
             src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
             alt={movie.title}

@@ -34,7 +34,7 @@ const CrewInfo = ({ id, apiKey, job, title }) => {
             <li 
             key={index}
             >
-              <Link to={`/person/${crewMember.id}`}>{crewMember.name}</Link>
+              <Link to={`/site_cine/person/${crewMember.id}`}>{crewMember.name}</Link>
               {index < crewInfo.length - 1 ? "," : ""}
             </li>
           ))

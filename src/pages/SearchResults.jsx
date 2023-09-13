@@ -46,7 +46,7 @@ const SearchResults = () => {
         setRequestUrl(requestUrl);
         setTotalPages(totalPages);
         setRequestUrl(updatedUrl);
-        navigate(`/searchresults/${nextPageQueryParam}`);
+        navigate(`/site_cine/searchresults/${nextPageQueryParam}`);
       })
       .catch((error) => {
         // Gestion des erreurs ici
@@ -77,7 +77,7 @@ const SearchResults = () => {
         setRequestUrl(requestUrl);
         setTotalPages(totalPages);
         setRequestUrl(updatedUrl);
-        navigate(`/searchresults/${previousPageQueryParam}`);
+        navigate(`/site_cine/searchresults/${previousPageQueryParam}`);
       })
       .catch((error) => {
         // Gestion des erreurs ici
@@ -94,18 +94,18 @@ const SearchResults = () => {
             {responseData.map((title, index) => (
               <div key={index} className="result">
                 {imageUrl && imageUrl[index] ? (
-                  <Link to={`/movie/${movieId[index]}`} className="trendMovie">
+                  <Link to={`/site_cine/movie/${movieId[index]}`} className="trendMovie">
                     <img
                       src={`https://image.tmdb.org/t/p/w500${imageUrl[index]}`}
                       alt={`Poster for ${title}`}
                     />
                   </Link>
                 ) : (
-                  <Link to={`/movie/${movieId[index]}`} className="trendMovie">
+                  <Link to={`/site_cine/movie/${movieId[index]}`} className="trendMovie">
                     <img src={defaultImage} alt="Default Image" />
                   </Link>
                 )}
-                <Link to={`/movie/${movieId[index]}`} className="trendMovie">
+                <Link to={`/site_cine/movie/${movieId[index]}`} className="trendMovie">
                 <h3 title={title}>{title}</h3>
                   </Link>
                 

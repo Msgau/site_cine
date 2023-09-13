@@ -9,7 +9,7 @@ const PictureList = ({ componentTitle, objects, statut, imagePathKey }) => {
       <ul className='component-list'>
         {objects.map(object => (
           <li key={object.id} className='component-item'>
-            <Link to={`/${statut}/${object.id}`}>
+            <Link to={`/site_cine/${statut}/${object.id}`}>
               <div className='component-image' title={statut === 'movie' ? object.title : object.name}>
                 <img
                   src={object[imagePathKey] ? `https://image.tmdb.org/t/p/w200${object[imagePathKey]}` : defaultImageURL}
