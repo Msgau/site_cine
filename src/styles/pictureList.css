@@ -6,16 +6,25 @@
     margin-top: 25px;
 }
 .component h3 {
-    margin-left: 10px;
+    margin: 0 0 0 15px;
+    padding-top: 5px;
 }
 .component-list {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Pour que les éléments commencent à gauche */
     align-items: center;
     padding: 0;
     margin: 20px 0 0 0;
+    max-width: 100%; /* Largeur maximale */
+    overflow-x: auto; /* Activer la barre de défilement horizontale */
+    overflow-y: hidden;
 }
-.component-item, .component-item img {
+.component-item{
+    width: 100px;
+    height: auto;
+    margin: auto 10px;
+}
+.component-item img {
     width: 100px;
     height: 150px;
     border-radius: 5px;
@@ -30,3 +39,4 @@
     text-overflow: ellipsis;
     font-size: 1em;
 }
+

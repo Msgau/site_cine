@@ -11,6 +11,7 @@ const MovieSearch = () => {
     setTotalPages,
     setRequestUrl,
     setMovieId,
+    setReleaseDate,
   } = useContext(AppContext);
   const navigate = useNavigate();
 
@@ -29,7 +30,9 @@ const MovieSearch = () => {
           (movie) => movie.poster_path
         );
         const movieId = response.data.results.map((movie) => movie.id);
+        const releaseDate = response.data.results.map((movie) => movie.release_date)
 
+        setReleaseDate(releaseDate);
         setResponseData(title);
         setImageUrl(imageUrl);
         setRequestUrl(requestUrl);

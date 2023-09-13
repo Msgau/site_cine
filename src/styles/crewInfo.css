@@ -1,25 +1,24 @@
 .infoContainer {
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    margin: 0 0 10px 0;
-  }
-  
-  .infoContainer h3 {
-    margin: 0;
-    font-size: 16px;
-    font-weight: 400;
-  }
-  
-  .infoContainer ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .infoContainer li {
-    display: inline;
-    margin: 0 0 0 5px;
-    font-weight: 700;
-  }
-  
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  margin: 0 0 10px 0;
+}
+
+.infoContainer h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  min-width: 70px;
+}
+
+.infoContainer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 0 5px;
+}
+
+.infoContainer li {
+  display: inline;
+  font-weight: 700;
+}

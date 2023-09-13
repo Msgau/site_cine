@@ -35,7 +35,7 @@ const CrewInfo = ({ id, apiKey, job, title }) => {
             key={index}
             >
               <Link to={`/site_cine/person/${crewMember.id}`}>{crewMember.name}</Link>
-              {index < crewInfo.length - 1 ? "," : ""}
+              {index < crewInfo.length - 1 ? ", " : ""}
             </li>
           ))
         ) : (

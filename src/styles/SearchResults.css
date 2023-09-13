@@ -22,10 +22,15 @@
     font-size: 13px;
     word-wrap: break-word;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+.searchResults h4 {
+    font-weight: normal;
+    /* text-align: center; */
+    font-size: 13px;
 }
 .searchResults a {
     color: white;
@@ -48,3 +53,46 @@
     position: absolute;
     right: 0;
 }
+.pagesNavigate button{
+    width: 110px;
+}
+
+@media (max-width: 600px) {
+    .result {
+        display: flex;
+        border-bottom: 1px solid grey;
+    }
+    .searchResults img {
+        width: 50px;
+        height: 75px;
+    }
+    .searchResults .result {
+        height: 95px;
+        width: 100%;
+    }
+    .trendMovie {
+        height: 95px;
+        margin: 0;
+        display: flex;
+        align-items: center;
+    }
+    .titleDate {
+        height: 90px;
+        margin: 0;
+
+        padding: 10px 0 0 10px;
+    }
+    .pagesNavigate button{
+        font-size: 12px;
+        width: 100px;
+    }
+    .titleDate {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 70px;
+    }
+    .searchResults h4 {
+        margin: 0;
+    }
+  }

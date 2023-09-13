@@ -31,7 +31,7 @@ const MovieDetails = () => {
     Promise.all([fetchMovieDetails, fetchCasting])
       .then(([movieResponse, castingResponse]) => {
         setMovieDetails(movieResponse.data);
-        const cast = castingResponse.data.cast.slice(0, 8);
+        const cast = castingResponse.data.cast.slice(0, 50);
         setCasting(cast);
       })
       .catch((error) => {

@@ -68,9 +68,9 @@ const Person = () => {
   }
 
   const biography = personDetails.biography;
-  const shouldShowMore = biography.length > 1000 && !showFullBiography;
+  const shouldShowMore = biography.length > 800 && !showFullBiography;
   const truncatedBiography = shouldShowMore
-    ? biography.slice(0, 1000) + "..."
+    ? biography.slice(0, 800) + "..."
     : biography;
 
   return (
@@ -87,7 +87,7 @@ const Person = () => {
         <div className="personDetails">
           <h2>{personDetails.name}</h2>
           <div className="bio block">
-            <h3>Biographie :</h3>
+            <h3><strong>Biographie :</strong></h3>
             <p>
               {truncatedBiography}{" "}
               {shouldShowMore && (
@@ -98,12 +98,11 @@ const Person = () => {
             </p>
           </div>
           <div className="birthdayDate block">
-            <h3>Date de naissance : </h3>
-            <p>{personDetails.birthday}</p>
+            <h3><strong>Date de naissance :</strong> {personDetails.birthday}</h3>
           </div>
           <div className="job block">
-            <h3>Métier :</h3>
-            <p>{personDetails.known_for_department}</p>
+            <h3><strong>Métier :</strong> {personDetails.known_for_department}</h3>
+
           </div>
         </div>
       </div>

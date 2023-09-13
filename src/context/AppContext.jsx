@@ -8,7 +8,7 @@ export const AppProvider = ({ children }) => {
   const [totalPages, setTotalPages] = useState(null);
   const [requestUrl, setRequestUrl] = useState(null);
   const [movieId, setMovieId] = useState(null);
-
+  const [releaseDate, setReleaseDate] = useState(null);
   return (
     <AppContext.Provider
       value={{
@@ -22,6 +22,8 @@ export const AppProvider = ({ children }) => {
         setRequestUrl,
         movieId,
         setMovieId,
+        releaseDate,
+        setReleaseDate,
       }}
     >
       {children}

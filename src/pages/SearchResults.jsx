@@ -18,9 +18,16 @@ const SearchResults = () => {
     setRequestUrl,
     movieId,
     setMovieId,
+    releaseDate,
+    setReleaseDate,
   } = useContext(AppContext); // Accédez à responseData, imageUrl et totalPages via useContext
   const pageQueryParam = new URLSearchParams(requestUrl).get("page");
   const navigate = useNavigate();
+
+  function formatDate(dateString) {
+    const options = { day: "numeric", month: "long", year: "numeric" };
+    return new Date(dateString).toLocaleDateString("fr-FR", options);
+  }
 
   const handleNextPage = () => {
     const nextPageQueryParam = parseInt(pageQueryParam) + 1;
@@ -94,21 +101,32 @@ const SearchResults = () => {
             {responseData.map((title, index) => (
               <div key={index} className="result">
                 {imageUrl && imageUrl[index] ? (
-                  <Link to={`/site_cine/movie/${movieId[index]}`} className="trendMovie">
+                  <Link
+                    to={`/site_cine/movie/${movieId[index]}`}
+                    className="trendMovie"
+                  >
                     <img
                       src={`https://image.tmdb.org/t/p/w500${imageUrl[index]}`}
                       alt={`Poster for ${title}`}
                     />
                   </Link>
                 ) : (
-                  <Link to={`/site_cine/movie/${movieId[index]}`} className="trendMovie">
+                  <Link
+                    to={`/site_cine/movie/${movieId[index]}`}
+                    className="trendMovie"
+                  >
                     <img src={defaultImage} alt="Default Image" />
                   </Link>
                 )}
-                <Link to={`/site_cine/movie/${movieId[index]}`} className="trendMovie">
-                <h3 title={title}>{title}</h3>
+                <div className="titleDate">
+                  <Link
+                    to={`/site_cine/movie/${movieId[index]}`}
+                    className="trendMovie"
+                  >
+                    <h3 title={title}>{title}</h3>
                   </Link>
-                
+                  <h4>{formatDate(releaseDate[index])}</h4>
+                </div>
               </div>
             ))}
           </>
@@ -118,7 +136,7 @@ const SearchResults = () => {
       <div className="pagesNavigate">
         {pageQueryParam > 1 && (
           <button className="previous" onClick={handlePreviousPage}>
-            page précédente
+            précédent
           </button>
         )}
         <div>
@@ -126,7 +144,7 @@ const SearchResults = () => {
         </div>
         {pageQueryParam < totalPages && (
           <button className="next" onClick={handleNextPage}>
-            page suivante
+            suivant
           </button>
         )}
       </div>

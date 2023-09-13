@@ -5,7 +5,7 @@ export default function NewsFeed() {
     <div className="newsFeed">
       <h2>Actualités</h2>
       <div className="composantActu first">
-      Bonjour et bienvenue sur Cine Crew. <br />
+      Bonjour et bienvenue sur Ciné Crew. <br />
       Le site est actuellement 
       en cours de développement. N'hésitez pas à utiliser le moteur de
       recherche et à naviger un peu pour vous faire une idée de l'avancée des travaux !

@@ -16,3 +16,17 @@
     color: white;
     text-decoration: underline;
 }
+
+
+@media all and (max-width: 800px) {
+    
+    .menu {
+        width: 15%;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .menu {
+        display: none;
+    }
+}
