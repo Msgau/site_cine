@@ -8,7 +8,7 @@ export default function Header() {
     <header>
       <div className='logo_title'>
       <img src={logo} alt="logo" className='logo'/>
-      <h1><NavLink to="/">Ciné Crew</NavLink></h1>
+      <h1><NavLink to="/site_cine/">Ciné Crew</NavLink></h1>
       </div>
       <MovieSearch />
       <Menu />
